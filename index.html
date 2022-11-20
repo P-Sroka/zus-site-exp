@@ -27,6 +27,48 @@ body{
 
 
 <body>
+<script>
+
+function zmienJezyk()
+{  
+var lokalizacja01;
+var lokalizacja02;
+
+lokalizacja01= document.getElementById("naglowek01");
+lokalizacja02 = document.getElementById("naglowek02");
+lokalizacja01.textContent = "Login";
+lokalizacja02.textContent = "Login into PUE";
+}
+
+
+
+function emerytura()
+
+{
+
+var userInput;
+var liczbaWprowadzona;
+var liczbaDoEmerytury
+
+userInput = prompt ('Podaj liczbę przepracowanych lat: ');
+
+liczbaWprowadzona = parseInt(userInput);
+liczbaDoEmerytury = 47 - liczbaWprowadzona;
+
+
+
+alert('Do emerytury pozostalo: ' + liczbaDoEmerytury + ' lat.');
+
+document.write('Do emerytury pozostalo: ' + liczbaDoEmerytury + ' lat.');
+
+}
+
+
+</script>
+
+
+
+
 <table>
 <thead>
   <tr>
@@ -42,15 +84,22 @@ body{
 	</td>
     <td>Zarejestruj w PUE |</td>
     <td>Zaloguj do PUE |</td>
-    <td><font style ='font-family: "Times New Roman";'>MOBA</font></td>
-    <td>Aa</td>
+	<td><select>
+	 <option selected>PL</option>
+	 <option selected>ENG</option>
+	
+    //
+	<td><button onclick="zmienJezyk();">ENG</button></td>
+    //
+	</td>
+	<td>Aa</td>
     <td><font style ='font-family:"Webdings";'>N</font></td>
   </tr>
 </thead>
 </table>
 
  <hr>
-<h1>Logowanie</h1>
+<h1 id = "naglowek01">Logowanie</h1>
 
 <p align = "center">
 
@@ -58,14 +107,18 @@ body{
 <thead>
   <tr>
     <td class="tg-ycr8">1</td>
-    <td class="tg-hqpa"><font-style = "color: white"><h1>Zaloguj sie do PUE
-	</h1>
+    <td class="tg-hqpa"><font-style = "color: white"><h2 id = "naglowek02">Zaloguj sie do PUE
+	</h2>
 	Login &nbsp 
 	<input type="text"> <br><br>
-	Haslo <input type="text"> <br> <br><br><br>
+	Hasło <input type="text"> <br> <br><br><br>
 	<input type="submit" value = "Zaloguj">
+	<br>
+	<br>
+	<button onclick="emerytura() ;">Sprawdź liczbę lat do emerytury</button>
 	</td> 
-
+	
+	
 	
     <td class="tg-okss"><img src = "AA.png"></td>
     <td class="tg-0lax">4</td>
